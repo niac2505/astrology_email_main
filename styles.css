@@ -1,0 +1,317 @@
+  @import url("https://use.typekit.net/upc2trk.css");
+
+  body {
+    background-color: #FEFEFF;
+    font-family: "logic-monospace", mono;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+h1 {
+  font-family: "logic-monospace", mono;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "logic-monospace", mono;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+
+p {
+  font-family: "logic-monospace", mono;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .9rem;
+  
+}
+
+blockquote {
+    font-family: "logic-monospace", mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+    color: #616161;
+    margin-left: 2rem;
+    padding-left: 10px;
+  }
+
+figcaption {
+    font-family: "logic-monospace", mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+    color: #000000;
+    margin-left: 2rem;
+    padding-left: 10px;
+  }
+
+  a:visited {
+    color: inherit;
+}
+
+.reply-meta {
+    font-family: "logic-monospace", mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+    color: #616161;
+    margin-top: 3rem;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  overflow: hidden;
+  }
+
+.main-content {
+  margin-right: 8rem;
+  margin-left: 5rem;
+  grid-column: 1/6;
+  grid-row-start: 2;
+  padding-bottom: 0;
+}
+
+.email-body p {
+  margin-top: 1rem;
+  padding-bottom: 0; 
+}
+
+.email-footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  grid-column: 1/6;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.email-footer button {
+  background: #F2F7FF;
+  border: 1.5px solid black;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  align-self: start;
+  margin-right: 30px;
+  transition: background 0.3s;
+}
+
+.email-footer button:hover {
+  background: #f0f0f0;
+  border: 1.5px solid black;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  align-self: start;
+  margin-right: 30px;
+}
+
+.next {
+  margin-left: auto; 
+}
+
+.nav-controls {
+  grid-column: 5 / 6;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nav-controls .span {
+    margin-left: 2rem;
+}
+
+.nav-controls button {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border: 1.5px solid #000000;
+  background-color: #F2F7FF;
+  border-radius: 10px;
+}
+
+.nav-controls button:hover {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border: 1.5px solid #000000;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+.exit {
+    grid-column: 1;
+}
+
+.exit button {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "logic-monospace", mono;
+    border: 1.5px solid #000000;
+    background-color: #F2F7FF;
+    border-radius: 10px;
+  }
+  
+  .exit button:hover {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "logic-monospace", mono;
+    border: 1.5px solid #000000;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+
+.email-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative; 
+  margin-bottom: 2rem;
+}
+
+.email-meta h2 {
+  margin: 0;
+}
+
+.email-meta span {
+  font-size: 0.9rem;
+  color: #606060;
+}
+
+.email-meta .date {
+  font-size: 0.9rem;
+  color: #606060;
+  margin-left: auto; 
+}
+
+.content {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #f1f1f1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.searchbar input[type="text"] {
+  flex: 1; 
+  padding: 10px;
+  border: 1.5px solid #000000;
+  border-radius: 12px;
+  font-family: "logic-monospace", mono;
+  background-color: #F2F7FF;
+}
+
+.email-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.email-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.email-1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.line-1 {
+    width: 1px;
+    height: 57px;
+    background-color: #616161;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.line-2 {
+    width: 1px;
+    height: 40px;
+    background-color: #616161;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.line-3 {
+    width: 1px;
+    height: 20px;
+    background-color: #616161;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.email-list {
+    margin-top: 20px;
+}
+
+.email-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s;
+    font-weight: bold;
+    background-color: white
+}
+
+.email-item:hover {
+    background-color: #f5f5f5;
+}
+
+.sender {
+    width: 20%;
+    font-weight: bold;
+}
+
+.email-subject {
+    width: 60%;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.date {
+    width: 20%;
+    text-align: right;
+    color: black;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: right;
+    color: black;
+}
