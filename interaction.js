@@ -1,5 +1,7 @@
-function changeColor(event, element) {
-    event.preventDefault(); // Prevent immediate navigation
+function changeColor(element) {
+    element.style.backgroundColor = '#E5E5E5';
+    element.style.fontStyle = 'normal';
+    element.style.fontWeight = 'normal';
 
     let clickedEmails = JSON.parse(localStorage.getItem('clickedEmails')) || [];
 
@@ -7,22 +9,17 @@ function changeColor(event, element) {
         clickedEmails.push(element.id);
         localStorage.setItem('clickedEmails', JSON.stringify(clickedEmails));
     }
-
-    applyStyles(); // Apply styles after clicking
-    setTimeout(() => {
-        window.location.href = element.getAttribute('data-href'); // Delay navigation
-    }, 100);
 }
 
-function applyStyles() {
+window.onload = function() {
     let clickedEmails = JSON.parse(localStorage.getItem('clickedEmails')) || [];
 
     clickedEmails.forEach(emailId => {
         const emailItem = document.getElementById(emailId);
         if (emailItem) {
-            emailItem.classList.add('read-email'); // Add a CSS class for styling
+            emailItem.style.backgroundColor = '#E5E5E5';
+            emailItem.style.fontStyle = 'normal';
+            emailItem.style.fontWeight = 'normal';
         }
     });
-}
-
-window.onload = applyStyles;
+};
