@@ -315,3 +315,9 @@ figcaption {
     text-align: right;
     color: black;
 }
+
+.read-email {
+  background-color: #E5E5E5 !important;
+  font-style: normal;
+  font-weight: normal;
+}
