@@ -333,3 +333,14 @@ figcaption {
   transition: background 0.3s;
   margin-top: 20px;
 }
+
+.reset-button:hover {
+  background: #f0f0f0;
+  border: 1.5px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  align-self: start;
+  margin-right: 30px;
+}
