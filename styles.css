@@ -311,7 +311,7 @@ figcaption {
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: -40px;
     text-align: right;
     color: black;
 }
@@ -320,4 +320,16 @@ figcaption {
   background-color: #E5E5E5 !important;
   font-style: normal;
   font-weight: normal;
+}
+
+.reset-button {
+  background: #F2F7FF;
+  border: 1.5px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  margin-right: 30px;
+  transition: background 0.3s;
+  margin-top: 20px;
 }

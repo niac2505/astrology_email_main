@@ -14,8 +14,9 @@
         </div>
         <div class="divider"></div>
 
+
         <div class="email-list">
-            <a style="text-decoration: none" href="email-1.html">
+            <a style="text-decoration: none" data-href="email-1.html" onclick="changeColor(event, this.children[0])">
                 <div class="email-item" id="email-1">
                     <span class="email-sender">Adam Grant</span>
                     <span class="email-subject">You’re Addicted to Astrology!!</span>
@@ -23,64 +24,64 @@
                 </div>
             </a>                        
 
-            <a style="text-decoration: none" href="email-2.html">
-                <div class="email-item" id="email-2" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-2.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-2">
               <span class="email-sender">Adam Grant</span>
               <span class="email-subject">Plea to Listen</span>
               <span class="email-date">Jan 27</span>
           </div>
           </a>
 
-          <a style="text-decoration: none" href="email-3.html">
-          <div class="email-item" id="email-3" onclick="changeColor(this)">
+          <a style="text-decoration: none" data-href="email-3.html" onclick="changeColor(event, this.children[0])">
+            <div class="email-item" id="email-3">
               <span class="email-sender">Adam Grant</span>
               <span class="email-subject">Re: Doesn’t astrology reveal personality traits?</span>
               <span class="email-date">Jan 28</span>
           </div>
           </a>
 
-          <a style="text-decoration: none" href="email-4.html">
-            <div class="email-item" id="email-4" onclick="changeColor(this)">
+          <a style="text-decoration: none" data-href="email-4.html" onclick="changeColor(event, this.children[0])">
+            <div class="email-item" id="email-4">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">Re: Wait, but birthdays matter!</span>
                 <span class="email-date">Jan 28</span>
             </div>
             </a>
 
-            <a style="text-decoration: none" href="email-5.html">
-            <div class="email-item" id="email-5" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-5.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-5">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">Re: Doesn’t the moon’s gravitational pull influence..</span>
                 <span class="email-date">Jan 28</span>
             </div>
             </a>
 
-            <a style="text-decoration: none" href="email-6.html">
-            <div class="email-item" id="email-6" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-6.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-6">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">Re: Why do my horoscopes always feel so accurate?</span>
                 <span class="email-date">Jan 28</span>
             </div>
             </a>
 
-            <a style="text-decoration: none" href="email-7.html"> 
-            <div class="email-item" id="email-7" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-7.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-7">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">Re: Isn’t astrology just a harmless way to feel..</span>
                 <span class="email-date">Jan 28</span>
             </div>
             </a>
 
-            <a style="text-decoration: none" href="email-8.html">
-            <div class="email-item" id="email-8" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-8.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-8">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">Re: Then what are we really influenced by?</span>
                 <span class="email-date">Jan 29</span>
             </div>
             </a>
 
-            <a style="text-decoration: none" href="email-9.html">
-            <div class="email-item" id="email-9" onclick="changeColor(this)">
+            <a style="text-decoration: none" data-href="email-9.html" onclick="changeColor(event, this.children[0])">
+                <div class="email-item" id="email-9">
                 <span class="email-sender">Adam Grant</span>
                 <span class="email-subject">One Last thing..</span>
                 <span class="email-date">Jan 29</span>
@@ -88,6 +89,7 @@
             </a>
 
         </div>
+        <button onclick="resetEmails()" class="reset-button">Reset Emails</button>
         <div class="footer">Latest Activity: 1 hour ago</div>
     </div>
 

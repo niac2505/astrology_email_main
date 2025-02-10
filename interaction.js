@@ -1,4 +1,6 @@
-function changeColor(element) {
+function changeColor(event, element) {
+    event.preventDefault(); // Prevent immediate navigation
+
     element.style.backgroundColor = '#E5E5E5';
     element.style.fontStyle = 'normal';
     element.style.fontWeight = 'normal';
@@ -9,6 +11,20 @@ function changeColor(element) {
         clickedEmails.push(element.id);
         localStorage.setItem('clickedEmails', JSON.stringify(clickedEmails));
     }
+
+    setTimeout(() => {
+        window.location.href = element.parentElement.getAttribute('data-href'); // Navigate
+    }, 100);
+}
+
+function resetEmails() {
+    localStorage.removeItem('clickedEmails'); // Remove stored email styles
+
+    document.querySelectorAll('.email-item').forEach(email => {
+        email.style.backgroundColor = ''; // Reset to default
+        email.style.fontStyle = '';
+        email.style.fontWeight = '';
+    });
 }
 
 window.onload = function() {
