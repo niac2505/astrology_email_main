@@ -3,8 +3,8 @@
   body {
     background-color: #FEFEFF;
     font-family: "logic-monospace", mono;
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
     margin-top: 3rem;
 }
 
@@ -21,12 +21,19 @@ h2 {
   font-style: normal;
 }
 
+h3 {
+  font-family: "logic-monospace", mono;
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: .8;
+}
+
 p {
   font-family: "logic-monospace", mono;
   font-weight: 400;
   font-style: normal;
-  font-size: .9rem;
-  
+  font-size: .9rem;  
 }
 
 blockquote {
@@ -49,8 +56,41 @@ figcaption {
     padding-left: 10px;
   }
 
+  caption {
+    font-family: "logic-monospace", mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+    color: #616161;
+    line-height: .8;
+  }
+
   a:visited {
     color: inherit;
+}
+
+.sub {
+  background: #F2F7FF;
+  border: 1.5px solid black;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  align-self: start;
+  margin-right: 30px;
+  transition: background 0.3s;
+}
+
+.sub:hover {
+  background: #d1e2ff;
+  border: 1.5px solid black;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-family: "logic-monospace", mono;
+  border-radius: 12px;
+  align-self: start;
+  margin-right: 30px;
+  transition: background 0.3s;
 }
 
 .reply-meta {
@@ -107,7 +147,7 @@ figcaption {
 }
 
 .email-footer button:hover {
-  background: #f0f0f0;
+  background: #d1e2ff;
   border: 1.5px solid black;
   padding: 10px 40px;
   cursor: pointer;
@@ -122,13 +162,9 @@ figcaption {
 }
 
 .nav-controls {
-  grid-column: 5 / 6;
-  margin-right: 2rem;
+  grid-column: 3;
   margin-bottom: 1rem;
-}
-
-.nav-controls .span {
-    margin-left: 2rem;
+  margin-right: 1rem;
 }
 
 .nav-controls button {
@@ -137,7 +173,7 @@ figcaption {
   font-family: "logic-monospace", mono;
   border: 1.5px solid #000000;
   background-color: #F2F7FF;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .nav-controls button:hover {
@@ -145,8 +181,8 @@ figcaption {
   cursor: pointer;
   font-family: "logic-monospace", mono;
   border: 1.5px solid #000000;
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  background-color: #d1e2ff;
+  border-radius: 12px;
 }
 .exit {
     grid-column: 1;
@@ -166,7 +202,7 @@ figcaption {
     cursor: pointer;
     font-family: "logic-monospace", mono;
     border: 1.5px solid #000000;
-    background-color: #f5f5f5;
+    background-color: #d1e2ff;
     border-radius: 10px;
   }
 
@@ -290,7 +326,7 @@ figcaption {
 }
 
 .email-item:hover {
-    background-color: #f5f5f5;
+    background-color: #d1e2ff;
 }
 
 .sender {
@@ -335,7 +371,7 @@ figcaption {
 }
 
 .reset-button:hover {
-  background: #f0f0f0;
+  background: #d1e2ff;
   border: 1.5px solid black;
   padding: 10px 20px;
   cursor: pointer;
@@ -343,4 +379,159 @@ figcaption {
   border-radius: 12px;
   align-self: start;
   margin-right: 30px;
+}
+
+.btn-arrow {
+  display: none;
+}
+
+.popup-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popup-text {
+  visibility: hidden;
+  border: 1.5px solid black;
+  background-color: #f9f9f9; 
+  font-family: "logic-monospace", mono;
+  color: #000000;
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out, visibility 0s 1s;
+  width: 25rem;
+  line-height: 1.4;
+}
+
+.popup-container:hover .popup-text {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0s 0s;
+}
+
+.hover-link {
+  color: #000000; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.hover-link:hover {
+  color: #2431be; 
+  text-decoration: underline; 
+}
+
+
+@media only screen and (max-width: 600px) {
+  .email-meta .year-time,
+  .email-meta .email-address {
+      display: none !important;
+  }
+
+  body {
+    background-color: #FEFEFF;
+    font-family: "logic-monospace", mono;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main-content {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    grid-column: 1/6;
+    grid-row-start: 2;
+    padding-bottom: 0;
+  }  
+
+  h1 {
+    font-family: "logic-monospace", mono;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-style: normal;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-family: "logic-monospace", mono;
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-style: normal;
+    margin-top: 2rem;
+  }
+
+  .email-footer {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    grid-column: 1/6;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .email-footer button {
+    background: #F2F7FF;
+    border: 1.5px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: "logic-monospace", mono;
+    border-radius: 12px;
+    align-self: start;
+    margin-right: 30px;
+    transition: background 0.3s;
+  }
+
+  .nav-controls {
+    display: flex; /* Enable flexbox */
+    flex-direction: row; /* Arrange elements horizontally */
+    justify-content: space-between; /* Space between the buttons and page info */
+    align-items: center; /* Center the items vertically */
+    width: 100%; /* Full width */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nav-controls span {
+    flex-grow: 1; 
+    text-align: right;
+  }
+
+  .nav-controls button {
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: "logic-monospace", mono;
+    border: 1.5px solid #000000;
+    background-color: #F2F7FF;
+    border-radius: 12px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    line-height: 1; 
+    margin-left: 10px;
+  }
+  
+  .nav-controls button .btn-text {
+    display: none; 
+  }
+  
+  .nav-controls button .btn-arrow {
+    display: inline-block;
+    font-size: 1rem; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  }
+  
+  .nav-controls a {
+    text-decoration: none; 
+  }
+
 }
