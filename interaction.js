@@ -1,5 +1,5 @@
 function changeColor(event, element) {
-    event.preventDefault(); // Prevent immediate navigation
+    event.preventDefault();
 
     element.style.backgroundColor = '#E5E5E5';
     element.style.fontStyle = 'normal';
@@ -13,15 +13,15 @@ function changeColor(event, element) {
     }
 
     setTimeout(() => {
-        window.location.href = element.parentElement.getAttribute('data-href'); // Navigate
+        window.location.href = element.parentElement.getAttribute('data-href');
     }, 100);
 }
 
 function resetEmails() {
-    localStorage.removeItem('clickedEmails'); // Remove stored email styles
+    localStorage.removeItem('clickedEmails');
 
     document.querySelectorAll('.email-item').forEach(email => {
-        email.style.backgroundColor = ''; // Reset to default
+        email.style.backgroundColor = '';
         email.style.fontStyle = '';
         email.style.fontWeight = '';
     });
@@ -39,3 +39,20 @@ window.onload = function() {
         }
     });
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.getElementById("search");
+  
+    searchBar.addEventListener("focus", function () {
+      if (this.value === "We need to talk about astrology.. by Adam Grant") {
+        this.value = "";
+      }
+    });
+  
+    searchBar.addEventListener("blur", function () {
+      if (this.value.trim() === "") {
+        this.value = "We need to talk about astrology.. by Adam Grant";
+      }
+    });
+  });
+  
