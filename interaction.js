@@ -39,20 +39,4 @@ window.onload = function() {
         }
     });
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-    const searchBar = document.getElementById("search");
-  
-    searchBar.addEventListener("focus", function () {
-      if (this.value === "We need to talk about astrology.. by Adam Grant") {
-        this.value = "";
-      }
-    });
-  
-    searchBar.addEventListener("blur", function () {
-      if (this.value.trim() === "") {
-        this.value = "We need to talk about astrology.. by Adam Grant";
-      }
-    });
-  });
   
